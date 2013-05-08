@@ -1,0 +1,40 @@
+/* -- Navigation Styles -- */
+
+.navigation > ul.menu{
+    float: left;
+    width: 100%;
+}
+
+.navigation ul.menu li{
+    position: relative;
+    list-style: none;
+    list-style-image: none;
+    z-index: 1;
+}
+
+.navigation > ul.menu > li{
+    float: left;
+}
+
+.navigation ul ul li{
+    margin: 0;
+    padding: 0;
+}
+
+.navigation ul ul{
+    position: absolute;
+    display: none;
+}
+
+.navigation > ul > li:hover{
+    z-index: 10;
+}
+
+.navigation > ul > li:hover > ul,
+.navigation > ul > li.mobile-hover > ul{
+    display: block;
+}
+
+.navigation ul ul ul{
+    display: none !important;
+}

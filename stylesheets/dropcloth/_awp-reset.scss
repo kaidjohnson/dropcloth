@@ -1,0 +1,37 @@
+/* -- General -- */
+
+* { margin: 0; padding: 0; border: 0; outline: none; box-shadow: none; font: inherit; vertical-align: baseline; background: transparent; }
+html { position: relative; overflow-y: scroll; }
+body { line-height: 1.5; font-size: 16px; }
+html, body{ min-height: 100%; }
+ul { list-style: none; }
+ol { list-style: decimal; }
+nav ul, nav ol { list-style: none; }
+blockquote, q { quotes: none; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+table { border-collapse: collapse; border-spacing: 0; } /* tables still need 'cellspacing="0"' in the markup */
+textarea { resize: none; overflow: auto }
+button, input { line-height: normal; }
+a, a *, input[type="submit"], input[type="button"], button, button * { cursor: pointer; }
+input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner, button::-moz-focus-inner { border: 0; padding: 0; }
+[hidden] { display: none; }
+:before, :after { content: ''; content: none; }
+:hover { outline: 0; }
+:focus { outline: thin dotted; }
+
+/* -- HTML5 -- */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; zoom: 1; }
+audio:not([controls]) { display: none; height: 0; }
+
+/* -- Font Styles -- */
+
+body { font-family: Helvetica, Arial, sans-serif; }
+pre, code, kbd, samp, tt, var { font-family: "Courier New", "DejaVu Sans Mono", monospace, sans-serif; }
+
+/* -- Image Styles -- */
+
+img { -ms-interpolation-mode: bicubic; }
+svg:not(:root) { overflow: hidden; }
