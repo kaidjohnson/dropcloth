@@ -1,80 +1,111 @@
-/* -- Override Drupal Styles -- */
+@import "compass/css3";
 
-body .form-item,
-body .form-actions{
-    margin: 0;
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+  }
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
-body .item-list ul,
-body .item-list ul li{
-    margin: 0;
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
 }
 
-body label.option.ui-button{
-    display: inline-block;
+@mixin element-focusable {
+  @include element-invisible;
+
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
 }
 
-body .region{
-    min-height: 0;
-}
-
-body.front #region-content .feed-icon{
-    display: none;
-}
-
-body #colorbox tbody{
-    border-top: none;
-}
-
-body #region-page-bottom{
-    overflow: hidden;
-}
-
-body ul li.leaf{
-    list-style: none;
-}
-
-/* -- Alpha Debug Blocks -- */
-
-body .region .alpha-debug-block{
-    clear: both !important;
-    background: #fff !important;
-}
-
-body .region .alpha-debug-block h2,
-body .region .alpha-debug-block p{
-    font: normal 14px/1 Helvetica, Arial, sans-serif !important;
-    color: #999 !important;
-}
-
-/* -- Grid Styles -- */
-
-.alpha{
-    clear: left;
-}
-
-/* -- Contextual Links -- */
-
-.contextual-links-wrapper ul,
-.contextual-links-wrapper li{
-    padding: 0 !important;
-    margin: 0 !important;
-    background: #fff !important;
-}
-
-.contextual-links-wrapper li{
-    font: normal 14px/1.5 Helvetica, Arial, sans-serif !important;
-    text-transform: none !important;
-    list-style: none !important;
-}
-
-.contextual-links-wrapper li a{
-    display: block !important;
-    text-decoration: none !important;
-}
-
-/* -- Generic Content Helpers -- */
-
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
-    color: inherit;
-}
+// /* -- Override Drupal Styles -- */
+// 
+// body .form-item,
+// body .form-actions{
+    // margin: 0;
+// }
+// 
+// body .item-list ul,
+// body .item-list ul li{
+    // margin: 0;
+// }
+// 
+// body label.option.ui-button{
+    // display: inline-block;
+// }
+// 
+// body .region{
+    // min-height: 0;
+// }
+// 
+// body.front #region-content .feed-icon{
+    // display: none;
+// }
+// 
+// body #colorbox tbody{
+    // border-top: none;
+// }
+// 
+// body #region-page-bottom{
+    // overflow: hidden;
+// }
+// 
+// body ul li.leaf{
+    // list-style: none;
+// }
+// 
+// /* -- Alpha Debug Blocks -- */
+// 
+// body .region .alpha-debug-block{
+    // clear: both !important;
+    // background: #fff !important;
+// }
+// 
+// body .region .alpha-debug-block h2,
+// body .region .alpha-debug-block p{
+    // font: normal 14px/1 Helvetica, Arial, sans-serif !important;
+    // color: #999 !important;
+// }
+// 
+// /* -- Grid Styles -- */
+// 
+// .alpha{
+    // clear: left;
+// }
+// 
+// /* -- Contextual Links -- */
+// 
+// .contextual-links-wrapper ul,
+// .contextual-links-wrapper li{
+    // padding: 0 !important;
+    // margin: 0 !important;
+    // background: #fff !important;
+// }
+// 
+// .contextual-links-wrapper li{
+    // font: normal 14px/1.5 Helvetica, Arial, sans-serif !important;
+    // text-transform: none !important;
+    // list-style: none !important;
+// }
+// 
+// .contextual-links-wrapper li a{
+    // display: block !important;
+    // text-decoration: none !important;
+// }
+// 
+// /* -- Generic Content Helpers -- */
+// 
+// h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+    // color: inherit;
+// }
