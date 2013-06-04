@@ -23,6 +23,7 @@ a, a *, input[type="submit"], input[type="button"], button, button * { cursor: p
 /* -- HTML5 -- */
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+i, cite, var, address, dfn{ font-style: normal; }
 audio, canvas, video { display: inline-block; *display: inline; zoom: 1; }
 audio:not([controls]) { display: none; height: 0; }
 
