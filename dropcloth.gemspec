@@ -9,8 +9,9 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://awpny.com'
   s.rubyforge_project =
 
-  s.version     = '0.0.1'
-  s.date        = '2013-05-07'
+  s.version     = '0.0.2'
+  s.date        = '2013-06-14'
+  s.license     = 'GPL-2'
 
   s.authors     = ['Kai Johnson']
   s.email       = 'kaidjohnson@gmail.com'
