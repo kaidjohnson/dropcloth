@@ -1,25 +1,52 @@
-/* -- Contextual Links -- */
+// General Overrides
 
-body .contextual-links-wrapper ul,
-body .contextual-links-wrapper li{
-    padding: 0;
+body{
+  .form-item,
+  .form-actions,
+  .item-list ul,
+  .item-list ul li{
     margin: 0;
-    background: #fff;
-    &:before,
-    &:after{
-      content: '';
-      content: none;
+  }
+}
+
+// Admin Menu
+
+body{
+  #admin-menu{
+    a{
+      @include font-basic(10px);
     }
+  }
 }
 
-body .contextual-links-wrapper li{
-    font: normal 14px/1.5 Helvetica, Arial, sans-serif;
-    text-transform: none;
-    list-style: none;
-}
+// Contextual Links
 
-body .contextual-links-wrapper li a{
-    display: block;
-    text-decoration: none;
-    font: inherit;
+body{
+  .block{
+    div.contextual-links-wrapper{
+      display: none;
+      ul,
+      li{
+        @include simple;
+        background: $white;
+        list-style: none;
+        &:before,
+        &:after{
+          @include simple;
+        }
+      }
+      a{
+        display: block;
+        text-decoration: none;
+        font: inherit;
+      }
+    }
+    &.contextual-links-region-active{
+      outline: 1px dashed #999;
+    }
+    &:hover div.contextual-links-wrapper,
+    &:focus div.contextual-links-wrapper{
+      display: block;
+    }
+  }
 }

@@ -1,13 +1,41 @@
 @import "compass/css3";
 
+// Colors
+
+$white: #fff;
+
+// Fonts
+
+$sans-serif: Helvetica, Arial, sans-serif;
+
+// Mixins
+
+@mixin nocontent {
+  content: '' !important;
+  content: none !important;
+}
+
+@mixin unbuffer {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+@mixin font-basic($size: 12px) {
+  font: normal #{$size}/1.5 $sans-serif !important;
+  text-transform: none !important;
+}
+
+@mixin simple {
+  @include unbuffer;
+  @include nocontent;
+  @include font-basic;
+}
+
 @mixin element-invisible {
   position: absolute !important;
   height: 1px;
   width: 1px;
   overflow: hidden;
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
-  }
   clip: rect(1px, 1px, 1px, 1px);
 }
 
@@ -28,65 +56,3 @@
     @include element-invisible-off;
   }
 }
-
-// /* -- Override Drupal Styles -- */
-// 
-// body .form-item,
-// body .form-actions{
-    // margin: 0;
-// }
-// 
-// body .item-list ul,
-// body .item-list ul li{
-    // margin: 0;
-// }
-// 
-// body label.option.ui-button{
-    // display: inline-block;
-// }
-// 
-// body .region{
-    // min-height: 0;
-// }
-// 
-// body.front #region-content .feed-icon{
-    // display: none;
-// }
-// 
-// body #colorbox tbody{
-    // border-top: none;
-// }
-// 
-// body #region-page-bottom{
-    // overflow: hidden;
-// }
-// 
-// body ul li.leaf{
-    // list-style: none;
-// }
-// 
-// /* -- Alpha Debug Blocks -- */
-// 
-// body .region .alpha-debug-block{
-    // clear: both !important;
-    // background: #fff !important;
-// }
-// 
-// body .region .alpha-debug-block h2,
-// body .region .alpha-debug-block p{
-    // font: normal 14px/1 Helvetica, Arial, sans-serif !important;
-    // color: #999 !important;
-// }
-// 
-// /* -- Grid Styles -- */
-// 
-// .alpha{
-    // clear: left;
-// }
-// 
-// 
-// /* -- Generic Content Helpers -- */
-// 
-// h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
-    // color: inherit;
-// }
