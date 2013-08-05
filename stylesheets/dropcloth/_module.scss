@@ -13,8 +13,12 @@ body{
 
 body{
   #admin-menu{
+    span,
     a{
       @include font-basic(10px);
+    }
+    li{
+      position: static;
     }
   }
 }
