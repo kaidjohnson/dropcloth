@@ -1,6 +1,6 @@
-@import 'base.scss';
-@import 'mixins.scss';
-@import 'modules/admin-menu.scss';
-@import 'modules/blocks.scss';
-@import 'modules/navigation.scss';
-@import 'modules/regions.scss';
+@import 'base/reset';
+@import 'base/mixins';
+@import 'modules/admin-menu';
+@import 'modules/blocks';
+@import 'modules/navigation';
+@import 'modules/regions';

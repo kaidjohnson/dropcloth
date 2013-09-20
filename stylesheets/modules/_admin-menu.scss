@@ -1,10 +1,14 @@
 #admin-menu{
   .dropdown{
     span, a{
-      font: normal 10px/1.15 Arial, sans-serif !important;
+      font: normal 10px/12px Arial, sans-serif !important;
       text-transform: none !important;
+      display: inline-block;
+      height: 12px;
+      padding: 4px 8px;
     }
     li{
+      font: normal 10px/12px Arial, sans-serif !important;
       position: static;
     }
   }
