@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://awpny.com'
   s.rubyforge_project =
 
-  s.version     = '0.0.4'
-  s.date        = '2013-08-04'
+  s.version     = '0.0.5'
+  s.date        = '2013-09-19'
   s.license     = 'GPL-2'
 
   s.authors     = ['Kai Johnson']
@@ -22,14 +22,13 @@ Gem::Specification.new do |s|
     LICENSE.txt
     README.txt
     lib/dropcloth.rb
+    stylesheets/modules/_admin-menu.scss
+    stylesheets/modules/_blocks.scss
+    stylesheets/modules/_navigation.scss
+    stylesheets/modules/_regions.scss
+    stylesheets/_base.scss
+    stylesheets/_mixins.scss
     stylesheets/dropcloth.scss
-    stylesheets/dropcloth/_awp-reset.scss
-    stylesheets/dropcloth/_base.scss
-    stylesheets/dropcloth/_globals.scss
-    stylesheets/dropcloth/_layout.scss
-    stylesheets/dropcloth/_module.scss
-    stylesheets/dropcloth/_state.scss
-    stylesheets/dropcloth/_theme.scss
     templates/project/manifest.rb
     templates/unit-tests/README.txt
     dropcloth.gemspec

@@ -1,0 +1,11 @@
+#admin-menu{
+  .dropdown{
+    span, a{
+      font: normal 10px/1.15 Arial, sans-serif !important;
+      text-transform: none !important;
+    }
+    li{
+      position: static;
+    }
+  }
+}

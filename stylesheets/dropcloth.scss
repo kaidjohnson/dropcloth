@@ -1,7 +1,6 @@
-@import 'dropcloth/awp-reset.scss';
-@import 'dropcloth/base.scss';
-@import 'dropcloth/globals.scss';
-@import 'dropcloth/layout.scss';
-@import 'dropcloth/module.scss';
-@import 'dropcloth/state.scss';
-@import 'dropcloth/theme.scss';
+@import 'base.scss';
+@import 'mixins.scss';
+@import 'modules/admin-menu.scss';
+@import 'modules/blocks.scss';
+@import 'modules/navigation.scss';
+@import 'modules/regions.scss';

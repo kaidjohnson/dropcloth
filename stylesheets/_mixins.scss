@@ -1,36 +1,11 @@
-@import "compass/css3";
-
-// Colors
-
-$white: #fff;
-
-// Fonts
-
-$sans-serif: Helvetica, Arial, sans-serif;
-
-// Mixins
-
-@mixin nocontent {
-  content: '' !important;
-  content: none !important;
+// Hides block titles.
+@mixin no-title{
+  .block-title{
+    display: none;
+  }
 }
 
-@mixin unbuffer {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-@mixin font-basic($size: 12px) {
-  font: normal #{$size}/1.5 $sans-serif !important;
-  text-transform: none !important;
-}
-
-@mixin simple {
-  @include unbuffer;
-  @include nocontent;
-  @include font-basic;
-}
-
+// Hides an element from view, the Drupal way.
 @mixin element-invisible {
   position: absolute !important;
   height: 1px;
@@ -50,9 +25,9 @@ $sans-serif: Helvetica, Arial, sans-serif;
   overflow: auto;
 }
 
+// Hides the element but makes it appear on focus. Improves accessibility.
 @mixin element-focusable {
   @include element-invisible;
-
   &:active,
   &:focus {
     @include element-invisible-off;
