@@ -49,3 +49,9 @@
   &::-moz-placeholder { @include opacity($o); @content; }
   &::-webkit-input-placeholder { @include opacity($o); @content; }
 }
+
+// Style ::selection
+@mixin selection{
+  ::selection{ @content; }
+  ::-moz-selection{ @content; }
+}
