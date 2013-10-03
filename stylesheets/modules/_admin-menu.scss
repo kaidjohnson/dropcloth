@@ -1,9 +1,12 @@
 #admin-menu{
+  &, *{
+    @include box-sizing(content-box);
+  }
   .dropdown{
     span, a{
       font: normal 10px/12px Arial, sans-serif !important;
       text-transform: none !important;
-      display: inline-block;
+      display: block;
       height: 12px;
       padding: 4px 8px;
     }
