@@ -51,7 +51,7 @@
 
 // Hover shortcut
 @mixin onhover{
-  .hover,
+  &.hover,
   &:hover,
   &:focus{
     @content;
