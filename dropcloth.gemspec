@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://awpny.com'
   s.rubyforge_project =
 
-  s.version     = '0.1.0'
+  s.version     = '0.1.1'
   s.date        = '2013-10-05'
   s.license     = 'GPL-2'
 
