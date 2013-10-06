@@ -7,8 +7,7 @@
       a{
         display: inline-block;
       }
-      &.hover,
-      &:hover{
+      @include onhover{
         z-index: 10;
         & > ul{
           display: block;
@@ -26,11 +25,6 @@
     ul{
       position: absolute;
       display: none;
-      // li{
-        // TODO - Investigate need for this.
-        // margin: 0;
-        // padding: 0;
-      // }
       ul{
         display: none;
       }

@@ -1,6 +1,7 @@
 #admin-menu{
   &, *{
     @include box-sizing(content-box);
+    @include opacity(1);
   }
   .dropdown{
     span, a{

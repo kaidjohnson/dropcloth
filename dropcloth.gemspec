@@ -9,14 +9,15 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://awpny.com'
   s.rubyforge_project =
 
-  s.version     = '0.0.9'
-  s.date        = '2013-10-02'
+  s.version     = '0.1.0'
+  s.date        = '2013-10-05'
   s.license     = 'GPL-2'
 
   s.authors     = ['Kai Johnson']
   s.email       = 'kaidjohnson@gmail.com'
 
-  s.add_runtime_dependency('sass', ">= 3.1")
+  s.add_runtime_dependency('sass', '>= 3.2')
+  s.add_runtime_dependency('compass', '>= 0.12')
 
   s.files       = %w[
     LICENSE.txt
@@ -30,7 +31,6 @@ Gem::Specification.new do |s|
     stylesheets/modules/_regions.scss
     stylesheets/dropcloth.scss
     templates/project/manifest.rb
-    templates/unit-tests/README.txt
     dropcloth.gemspec
   ]
 end
