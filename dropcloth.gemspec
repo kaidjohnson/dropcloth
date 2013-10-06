@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://awpny.com'
   s.rubyforge_project =
 
-  s.version     = '0.1.1'
+  s.version     = '0.1.2'
   s.date        = '2013-10-05'
   s.license     = 'GPL-2'
 
@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
 
   s.files       = %w[
     LICENSE.txt
-    README.txt
+    README.md
     lib/dropcloth.rb
     stylesheets/base/_mixins.scss
     stylesheets/base/_reset.scss
