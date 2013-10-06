@@ -12,7 +12,7 @@ INSTALLATION
 
 Dropcloth is distributed as a Ruby Gem. On your computer, simply run:
 
-  sudo gem install zen-grids
+  sudo gem install dropcloth
 
 
 USAGE
