@@ -1,46 +1,19 @@
-// Hides block titles.
-@mixin no-title {
-  .block-title{
-    display: none;
-  }
-}
-
-// Hides an element from view, the Drupal way.
-@mixin element-invisible {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-// Turns off the element-invisible effect.
-@mixin element-invisible-off {
-  position: static !important;
-  clip: auto;
-  height: auto;
-  width: auto;
-  overflow: auto;
-}
-
-// Hides the element but makes it appear on focus. Improves accessibility.
-@mixin element-focusable {
-  @include element-invisible;
-  &:active,
-  &:focus {
-    @include element-invisible-off;
+// Hover shortcut
+@mixin onhover{
+  &.hover,
+  &:hover,
+  &:focus{
+    @content;
   }
 }
 
 // Style placeholders
-@mixin placeholder($o: 1) {
-  &.placeholder { @include opacity($o); @content; }
-  &:-ms-input-placeholder { @include opacity($o); @content; }
-  &:-moz-placeholder { @include opacity($o); @content; }
-  &::-moz-placeholder { @include opacity($o); @content; }
-  &::-webkit-input-placeholder { @include opacity($o); @content; }
+@mixin placeholder($opacity: 1) {
+  &.placeholder { @include opacity($opacity); @content; }
+  &:-ms-input-placeholder { @include opacity($opacity); @content; }
+  &:-moz-placeholder { @include opacity($opacity); @content; }
+  &::-moz-placeholder { @include opacity($opacity); @content; }
+  &::-webkit-input-placeholder { @include opacity($opacity); @content; }
 }
 
 // Style ::selection
@@ -49,12 +22,10 @@
   ::-moz-selection{ @content; }
 }
 
-// Hover shortcut
-@mixin onhover{
-  &.hover,
-  &:hover,
-  &:focus{
-    @content;
+// Hides block titles.
+%no-title {
+  .block-title{
+    display: none;
   }
 }
 
@@ -79,6 +50,34 @@
   @include filter(grayscale(1));
   filter: gray; /* IE6-9 */
   filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale"); /* Firefox 10+, Firefox on Android */
+}
+
+// Hides an element from view, the Drupal way.
+%element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+%element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+// Hides the element but makes it appear on focus. Improves accessibility.
+%element-focusable {
+  @extend %element-invisible;
+  @include onhover{
+    @extend %element-invisible-off;
+  }
 }
 
 // Links within a container
