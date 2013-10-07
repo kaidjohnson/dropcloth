@@ -53,7 +53,7 @@ Sass Mixins & Placeholders
 
 ### @include linkify($rev: false);
 
-* Styles all <a> element children as a revlink or stdlink (see placeholders below)
+* Styles all &lt;a&gt; element children as a revlink or stdlink (see placeholders below)
 
 * *@param (bool) $rev* -- Whether the link should be reversed or not (default: false).
 

@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{A Compass plugin for Drupal.}
   s.description = %q{Dropcloth provides a set of base styles for Drupal theming.}
 
-  s.homepage    = 'http://awpny.com'
+  s.homepage    = 'https://github.com/kaidjohnson/dropcloth'
   s.rubyforge_project =
 
   s.version     = '0.1.4'
