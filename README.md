@@ -80,6 +80,13 @@ Sass Mixins & Placeholders
 * *@requires* compass/css3
 
 
+### @extend %fullcolor;
+
+* Removes effects added by %grayscale.
+
+* *@requires* compass/css3
+
+
 ### @extend %element-invisible;
 
 * Hides an element the way Drupal does a la .element-invisble.
