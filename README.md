@@ -1,9 +1,9 @@
 Dropcloth
 =========
-Dropcloth is a compass plugin and css neutralizer for Drupal. It provides a
-lightweight reset, protection for non-theme elements, and practical mixins for
-a cleaner Drupal theming experience. Originally designed for use with Zen,
-Dropcloth can be used anywhere you use sass and compass.
+Dropcloth is a compass plugin and css neutralizer for Drupal. It provides
+protection for non-theme elements and practical mixins for a cleaner Drupal
+theming experience. Originally designed for use with Zen, Dropcloth can be used
+anywhere you use sass and compass.
 
 
 Install
@@ -11,7 +11,7 @@ Install
 
 Dropcloth is distributed as a Ruby Gem. On your computer, simply run:
 
-    $ sudo gem install dropcloth
+    $ gem install dropcloth
 
 
 Use
@@ -23,10 +23,27 @@ line:
 
     require "dropcloth"
 
-You can then start using Dropcloth in your theme. Just add this line to one
-of your .sass or .scss files and theme with confidence!
+You can then start using Dropcloth in your theme. Just add this line to one of
+your .sass or .scss files and theme with confidence!
 
     @import "dropcloth";
+
+Want only the mixins and placeholders without all the Drupal-specific stuff?
+
+    @import "dropcloth/light";
+
+
+Upgrading to v0.2.0 or higher
+-----------------------------
+
+Up until version 0.2.0, Dropcloth came bundled with a css reset. We decided that
+you should not be locked into a css reset thus, as of v0.2.0, Dropcloth no
+longer provides a css reset. Fear not, there are plenty great alternatives out
+there:
+
+* If you enjoyed the reset that was previously bundled with Dropcloth, check out reset-css, the gem that resulted from this decision.
+
+* Something more traditional, perhaps? Check out [meyer-reset](https://rubygems.org/gems/meyer-reset).
 
 
 Sass Mixins & Placeholders
@@ -39,7 +56,7 @@ Sass Mixins & Placeholders
 
 ### @include placeholder($opacity: 1) { @content; }
 
-* Styles HTML5 placeholder attributes with .placeholder class support for legacy support.
+* Styles HTML5 placeholder attributes with .placeholder class for legacy support.
 
 * *@param (float) $opacity* -- A floating decimal to be passed as the element's opacity (default: 1).
 
