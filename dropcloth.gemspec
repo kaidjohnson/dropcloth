@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/kaidjohnson/dropcloth'
   s.rubyforge_project =
 
-  s.version     = '0.2.0'
-  s.date        = '2013-11-14'
+  s.version     = '0.2.1'
+  s.date        = '2013-12-09'
   s.license     = 'GPL-2'
 
   s.authors     = ['Kai Johnson']
